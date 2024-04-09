@@ -1,0 +1,18 @@
+
+.vehicle ul {
+    list-style-type: none;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.vehicle ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.vehicle ul li:last-child {
+    border-bottom: none;
+}

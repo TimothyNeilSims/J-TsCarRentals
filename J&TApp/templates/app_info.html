@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title>App Info</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.webp') }}" alt="Logo" style="width: 100px;">
+
+            <h1>App Info</h1>
+            <button onclick="location.href='/'" type="button">Return to Main Page</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('view_ER') }}">ER Diagram</a></li>                
+            </ul>
+        </nav>
+        <div id="database-application" style="font-family: Arial, sans-serif; margin: 20px;">
+            <h2>Proposed Database Application:</h2>
+            <p>
+            The database application we plan to develop is for a Car Rental Company primarily using MySQL for the 
+            database side. For the GUI we plan on developing it using ReactJS. This database will store the account 
+            information (name, payment info, address, phone number, age, email, account type), information on the 
+            cars (make, model, year, condition, color, price), each rental a customer makes as well as the condition 
+            of the car when it is returned, customer feedback/review for each rental, as well as favorites so customers 
+            can save favorite cars, and there will be an admin that can view all of this information as well as analytics 
+            based off of it.
+            </p>
+        </div>
+        <div id="functionality-specifications" style="font-family: Arial, sans-serif; margin: 20px;">
+            <h2>Functionality Specifications:</h2>
+            <p>
+            Since we are choosing to develop a Car Rental Company database, the particular functionalities that we intend to implement are as follows:
+            <ul>
+                <li>Account creation that contains the creation date, name, age, address, phone number, and email.</li>
+                <li>User login information that contains attributes like username, password, and other relevant information about the user.</li>
+                <li>An account system that will track the information of an admin, who is in charge of all the rental listings, and the information of customers.</li>
+                <li>An admin dashboard where they can edit all the car listings, finalize the reservations made by customers, and track all the transactions.</li>
+                <li>The admin dashboard will display important analytics about requests, reservations, and information about the customers.</li>
+                <li>A notification system will be implemented to notify the admin about the reservations made by the customers.</li>
+                <li>A customer dashboard where customers can view the currently available cars as well as the description, and general attributes of the cars. 
+                The customer can select any car that shows available and reserve it instantly as long as the age requirement is met, upon which they will be charged.</li>
+                <li>A window to confirm all the personal details of the customer and payment information.</li>
+                <li>A profile information where customers can access to edit their personal information, payment type, and preferences.</li>
+                <li>A review/rating system for the experience of the customer with the car they rented.</li>
+                <li>A system that notifies the admin if the condition of a car after being returned is lower than when it was rented, and can charge the customer extra if that is the case.</li>
+            </ul>
+            </p>
+        </div>
+</body>
+
+</html>

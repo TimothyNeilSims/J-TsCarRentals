@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ER Diagram</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.webp') }}" alt="Logo" style="width: 100px;">
+        </div>
+    <h1>ER Diagram</h1>
+    <button onclick="location.href='/app_info'" type="button">Return to App Info</button>
+    <body>
+        <img src="{{ url_for('static', filename='TermProject.jpg') }}" alt="ER Diagram" style="width: 100%;">
+    </body>
+    <div id="database-details" style="font-family: Arial, sans-serif; margin: 20px;">
+        <h2>Details of the Database Tables:</h2>
+        <p>
+            <b>User Table:</b> consists of the userID as the primary key that uniquely identifies the user information, 
+            which is also included in the table. The personal information included in the table are username, 
+            password, name, unique email address, physical address, phone number, age. Also, the user table includes 
+            the account type to differentiate between a regular user and an admin, a list of favorite vehicles selected 
+            by the user, an account creation date, and a foreign key named paymentID that includes the payment details.
+        </p>
+        <p>
+            <b>Ticket Table:</b> is a table that contains any issue or requests created by the user. A unique ticketID serves 
+            as the primary key to identify each request separately. Also, the table includes an issue variable that 
+            holds the message created by the user, and uses three foreign keys to fill in the rest of the information 
+            by using userID, rentalID, and paymentID, however rentalID and paymentID are only required if the ticket 
+            is in reference to one of them.
+        </p>
+        <p>
+            <b>Payment Table:</b> contains the unique primary key paymentID, as well as the information required for a payment: 
+            name, card number, expiration date, security code, and the userID (foreign key) that it is associated with.
+        </p>
+        <p>
+            <b>Reviews Table:</b> is a weak entity whose primary key consists of a rentalID and vehicleID. When the user fills 
+            this out they must fill in the rating, but the feedback is optional.
+        </p>
+        <p>
+            <b>Rental Table:</b> is an important part of the database because it creates a formal rental agreement between the 
+            user and the company. This table uses rentalID as the primary key to distinguish between different rental 
+            contracts. The information contained in the agreement are the approved variable that shows if the reservation 
+            has been approved, the initial condition that shows the state of the vehicle when is rented out, the initial 
+            date when the rental vehicle is sent out, the final date of when the vehicle is returned to the rental company, 
+            a returned variable that specifies if the vehicle has been returned or not, the final condition of the vehicle 
+            when is returned, and the total price of what the vehicle cost for the specified days that the customer selected. 
+            Also, it is included in the table three foreign keys called vehicleID, userID, and paymentID, which are used to 
+            complete the rest of the information in the rental agreement.
+        </p>
+        <p>
+            <b>Vehicles Table:</b> this table stores the individual vehicles offered by the rental service. The primary key is 
+            vehicleID, and the attributes include make, model, year, color, the current condition of the vehicle 
+            (such as perfect, minor cosmetic damage, ect.), description, price, the average of all its ratings, and whether 
+            it is available or not. The condition will be updated after it is returned by a customer, and the availability 
+            of it will update based on if it is currently at the facility or not.
+        </p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.vehicle ul {
+    list-style-type: none;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.vehicle ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.vehicle ul li:last-child {
+    border-bottom: none;
+}

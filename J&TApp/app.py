@@ -175,7 +175,7 @@ def list_available_vehicles():
     conn_str = 'mysql+pymysql://root:password@localhost/j&tcarrentals'
     db_con = create_engine(conn_str)
     sql = "SELECT * FROM Vehicles WHERE isAvailable = TRUE"
-    vehicles = []  # Initialize an empty list to store vehicle data
+    vehicles = []
     with db_con.connect() as conn:
         result = conn.execute(text(sql))
         vehicles = [dict(row) for row in result]
@@ -306,10 +306,10 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        isValid, account_type = validate_user_login_and_get_account_type(username, password)  # Adjusted function
+        isValid, account_type = validate_user_login_and_get_account_type(username, password)
         if isValid:
             session['username'] = username
-            session['account_type'] = account_type  # Store the account type in the session
+            session['account_type'] = account_type
             return redirect(url_for('dashboard'))
         else:
             return render_template('login.html', error="Invalid username or password.")
